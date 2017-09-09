@@ -2,16 +2,6 @@
 
 {% block content %}
 
-  <h2>Login</h2>
-  <form method="post">
-
-      {% csrf_token %}
-      Username: <input type="text" name="user">
-      Password: <input type="text" name="passwd">
-
-      <button type="submit">Submit</button>
-  </form>
-  <p>{{ rlt }}</p>
 
      <div>
              <ul>
@@ -43,10 +33,22 @@
   </div>
 </div>
 
+ <div class="polaroid">
+      <img src="static/image/plaza1.jpg" style="width:304px;height:228px;">
+  <div class="container">
+    <p>The Troll's tongue in Hardanger, Norway</p>
+  </div>
+  </div>
 
-        <img src="static/image/plaza1.jpg" style="width:304px;height:228px;">
+  <div class="polaroid">
+      <img src="static/image/plaza1.jpg" style="width:304px;height:228px;">
 
-        <img src="static/image/plaza1.jpg" style="width:304px;height:228px;">
+  <div class="container">
+    <p>Northern Lights in Norway</p>
+  </div>
+</div>
+
+
 
 {% endblock %}
 

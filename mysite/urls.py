@@ -38,7 +38,9 @@ urlpatterns = [
     url(r'^login/', include('login.urls')),
 
     #url(r'^admin/', admin.site.urls),
-    url(r'^hello$', view.hello),
+
+    url(r'^$', view.hello),
+
     url(r'^search-form$', search.search_form),
     url(r'^search$', search.search),
     url(r'^login/$', auth_views.login, name='login'),

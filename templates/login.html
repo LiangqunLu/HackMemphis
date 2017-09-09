@@ -1,13 +1,17 @@
 
-{% block title %}Login{% endblock %}
 
-{% block content %}
   <h2>Login</h2>
   <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-  </form>
 
-{% endblock %}
+      {% csrf_token %}
+      Username:<br>
+      <input type="text" name="user"><br>
+      Password:<br>
+      <input type="text" name="passwd"> <br>
+
+      <button type="submit">Submit</button>
+  </form>
+  <p>{{ rlt }}</p>
+
+
 
