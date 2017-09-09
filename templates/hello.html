@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <h2>Login</h2>
+  <form method="post">
+
+      {% csrf_token %}
+      Username: <input type="text" name="user">
+      Password: <input type="text" name="passwd">
+
+      <button type="submit">Submit</button>
+  </form>
+  <p>{{ rlt }}</p>
+
+     <div>
+             <ul>
+                 <li><a class="{% block home %}{% endblock %}" href="/">Home</a></li>
+                 <li><a class="{% block housing %}{% endblock %}" href="/housing/">Housing</a></li>
+                 <li><a class="{% block roommate %}{% endblock %}" href="/roommate/">Roommate</a></li>
+                 <li><a class="{% block carpool %}{% endblock %}" href="/carpool/">Carpool</a></li>
+                 <li><a class="{% block studygroup %}{% endblock %}" href="/studygroup/">Study Group</a></li>
+                 <li><a class="{% block contact %}{% endblock %}" href="/contact/">Contact us</a></li>
+                 <li><a class="{% block login %}{% endblock %}" href="/login/">Log in</a></li>
+
+
+             </ul>
+
+     </div>
+
+  <div class="polaroid">
+      <img src="static/image/plaza1.jpg" style="width:304px;height:228px;">
+  <div class="container">
+    <p>The Troll's tongue in Hardanger, Norway</p>
+  </div>
+  </div>
+
+  <div class="polaroid">
+      <img src="static/image/plaza1.jpg" style="width:304px;height:228px;">
+
+  <div class="container">
+    <p>Northern Lights in Norway</p>
+  </div>
+</div>
+
+
+        <img src="static/image/plaza1.jpg" style="width:304px;height:228px;">
+
+        <img src="static/image/plaza1.jpg" style="width:304px;height:228px;">
+
+{% endblock %}
+
+
+
+
+
+
+

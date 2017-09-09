@@ -15,10 +15,39 @@ Including another URLconf
 """
 
 from django.conf.urls import include, url
+from django.contrib.auth import views as auth_views
 from django.contrib import admin
+from . import view, search
+
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
 
     url(r'^polls/', include('polls.urls')),
-    url(r'^admin/', admin.site.urls),
+
+    url(r'^housing/', include('housing.urls')),
+
+    url(r'^roommate/', include('roommate.urls')),
+    url(r'^carpool/', include('carpool.urls')),
+    url(r'^studygroup/', include('studygroup.urls')),
+
+    url(r'^contact/', include('contact.urls')),
+
+    url(r'^login/', include('login.urls')),
+
+    #url(r'^admin/', admin.site.urls),
+    url(r'^hello$', view.hello),
+    url(r'^search-form$', search.search_form),
+    url(r'^search$', search.search),
+    url(r'^login/$', auth_views.login, name='login'),
+    url(r'^logout/$', auth_views.logout, name='logout'),
+
+
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
