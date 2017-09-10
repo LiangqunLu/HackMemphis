@@ -4,50 +4,77 @@
         <meta charset="utf-8">
 
     <title>{% block title %}{% endblock %}</title>
+
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
     <link rel="stylesheet" href="/static/css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+
+<body>
+
+		<div class="">
+
+        <img src="static/image/logo.png" style="width:50%; float: left" >
+
+        <!--<h2 style="float:right" >One-stop Information Service</h2>-->
+
+        </div>
+
+          <div class = "floating_menu">
+             <ul>
+                 <li><a class="{% block home %}{% endblock %}" href="/">Home</a></li>
+                 <li><a class="{% block housing %}{% endblock %}" href="/housing/">Housing</a></li>
+                 <li><a class="{% block roommate %}{% endblock %}" href="/roommate/">Roommate</a></li>
+                 <li><a class="{% block carpool %}{% endblock %}" href="/carpool/">Carpool</a></li>
+                 <li><a class="{% block studygroup %}{% endblock %}" href="/studygroup/">Study Group</a></li>
+                 <li><a class="{% block contact %}{% endblock %}" href="/contact/">Contact us</a></li>
+
+             </ul>
+
+          </div>
+
+    <div class = "floating_login">
+
+      <ul>
+                 <li><a class="{% block sign %}{% endblock %}" href="/login/">Sign Up</a></li>
+                 <li><a class="{% block login %}{% endblock %}" href="/login/">Log in</a></li>
+       </ul>
 
 
- </head>
-
-
-    <body class="{% block bodyclass %}{% endblock %}">
-
-  <div style = "background-color: #b0e0e6;">
-<p style="width: 100%; text-align: center; padding: 5px;">
-
-    <span style="text-align: center; color:blue; padding:10px; font-size:24pt">HackMemphis</span>
-
-</p> </div>
-
-
-  	<div id="page">
-
-        <header class="header header-page ">
-			<div class="univ-header-bg clearfix">
-	<div class="univ-header col-6 clearfix">
-
-		<h1 class="sitename"><a class="logo" href="http://memphis.edu/">University of Memphis</a></h1>
-        <h2 class="site-tagline">One-stop information</h2>
     </div>
-    </div>
 
-
-        </header>
-
+     </header>
 
   {% block content %}
 
-
   {% endblock %}
-  {% block footer %}{% endblock %}
+
 
  <footer>
-  <p>Created at 2017</p>
-  <p>Contact information: <a href="mailto:someone@example.com"> someone@example.com</a>.</p>
-</footer>
+
+     <hr>
+
+  <div class = "footer">
+
+     <p> Follow us for more information </p>
+
+    <a class="fa fa-facebook"></a>
+    <a class="fa fa-twitter"></a>
+    <a class="fa fa-google"></a>
+    <a class="fa fa-instagram"></a>
+
+    <a class="fa fa-rss"></a>
+
+     <p>COPYRIGHT 2017 RESERVED</p>
+
+  </div>
+
+
+ </footer>
 
 
  </body>
+
  </html>

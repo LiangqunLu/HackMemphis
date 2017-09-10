@@ -1,1 +1,44 @@
-<h1> content</h1>
+{% extends "hello.html" %}
+
+{% block content %}
+
+<h3>Housing</h3>
+
+<div class="forms">
+<form>
+<input class="formArea" type="text" location="location" value="University of Memphis Area">
+<input class="submitButton" type="submit" value="Submit">
+
+<input class="form" type="text" location="location" value="Price">
+<input class="form" type="text" location="location" value="Pets">
+<input class="form" type="text" location="location" value="Parking">
+</form>
+
+
+
+</div>
+<div id="map"></div>
+
+<div>
+<p>Looking for a roommate? Use our roommate finder!</p>
+</div>
+<script>
+function initMap() {
+var uluru = {lat: 35.118820, lng: -89.936626};
+var map = new google.maps.Map(document.getElementById('map'), {
+zoom: 12,
+center: uluru
+});
+var marker = new google.maps.Marker({
+position: uluru,
+map: map
+});
+}
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKZOZWwzR0eyKzqxAfrSTjKb6bnL9ZdHo&callback=initMap">
+</script>
+{% endblock %}
+
+
+

@@ -1,1 +1,40 @@
-<h1> content</h1>
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+
+<div>
+<h2> Study group </h2>
+<img src="../static/image/group.jpg" alt=" study group" style="width:304px;height:228px;">
+
+</div>
+
+<div>
+
+<br>
+<form action="/action_page.php">
+Course name: <input type="text" name="course_name" value="course name">
+<br>
+Course number: <input type="text" name="course no" value="course number">
+<br><br>
+
+<input class="submitButton" type="submit" name="submit" value="Submit">
+</form>
+</div>
+<div>
+<script type="text/javascript">
+$(document).ready(function () {
+$("#textbox1").wijinputdate(
+{
+showTrigger: true
+});
+});
+</script>
+
+</div>
+</div>
+
+{% endblock %}
+
+
