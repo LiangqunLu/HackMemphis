@@ -2,7 +2,7 @@
 
 {% block content %}
 
-     <div>
+     <div class = "floating_menu">
              <ul>
                  <li><a class="{% block home %}{% endblock %}" href="/">Home</a></li>
                  <li><a class="{% block housing %}{% endblock %}" href="/housing/">Housing</a></li>
@@ -10,42 +10,50 @@
                  <li><a class="{% block carpool %}{% endblock %}" href="/carpool/">Carpool</a></li>
                  <li><a class="{% block studygroup %}{% endblock %}" href="/studygroup/">Study Group</a></li>
                  <li><a class="{% block contact %}{% endblock %}" href="/contact/">Contact us</a></li>
-                 <li><a class="{% block login %}{% endblock %}" href="/login/">Log in</a></li>
-
 
              </ul>
 
      </div>
 
-  <div class="polaroid">
-      <img src="static/image/plaza1.jpg" style="width:304px;height:228px;">
-  <div class="container">
-    <p>The Troll's tongue in Hardanger, Norway</p>
-  </div>
-  </div>
+    <div class = "floating_login">
 
-  <div class="polaroid">
-      <img src="static/image/plaza1.jpg" style="width:304px;height:228px;">
+      <ul>
+                 <li><a class="{% block sign %}{% endblock %}" href="/login/">Sign Up</a></li>
+                 <li><a class="{% block login %}{% endblock %}" href="/login/">Log in</a></li>
+       </ul>
 
-  <div class="container">
-    <p>Northern Lights in Norway</p>
-  </div>
+
+    </div>
+
+
+<div class = "slideshow" >
+  <img class="mySlides" src="static/image/housing.jpg" style="width:100%">
+  <img class="mySlides" src="static/image/roommate.jpg" style="width:100%">
+  <img class="mySlides" src="static/image/studygroup.jpg" style="width:100%">
+    <img class="mySlides" src="static/image/carpool.jpg" style="width:100%">
+
 </div>
 
- <div class="polaroid">
-      <img src="static/image/plaza1.jpg" style="width:304px;height:228px;">
-  <div class="container">
-    <p>The Troll's tongue in Hardanger, Norway</p>
-  </div>
-  </div>
+<p> Welcome to our one-stop information service</p>
 
-  <div class="polaroid">
-      <img src="static/image/plaza1.jpg" style="width:304px;height:228px;">
 
-  <div class="container">
-    <p>Northern Lights in Norway</p>
-  </div>
-</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 
 
 
