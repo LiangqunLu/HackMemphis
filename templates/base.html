@@ -29,7 +29,7 @@
 	<div class="univ-header col-6 clearfix">
 
 		<h1 class="sitename"><a class="logo" href="http://memphis.edu/">University of Memphis</a></h1>
-        <h2 class="site-tagline">Off-Campus Housing</h2>
+        <h2 class="site-tagline">One-stop information</h2>
     </div>
     </div>
 
@@ -39,35 +39,15 @@
 
   {% block content %}
 
-     <div id="content">
-
-         {% block navigation %}
-             <ul id="top">
-                <li><a class="{% block home %}{% endblock %}" href="/">Home</a></li>
-                <li><a class="{% block myaccount %}{% endblock %}" href="/profile/">My Account</a></li>
-                {% if perms.staffing.add_staffrequest %}
-                 <li><a class="{% block createsr %}{% endblock %}"
-                  href="/create/staffrequest/">Staff Request</a></li>
-                {% endif %}
-             </ul>
-         {% endblock %}
-
-         {% block real_content %}
-         <div id="intro">
-             <p>Hello, {{ user.first_name }}.</p>
-             <p>Please create a Staff Request here by filling out the form below.</p>
-          </div> <!-- end intro -->
-
-          <div id="logout">
-           <a href="/accounts/logout" alt="Sign Off" title="Sign Off">Sign Off</a>
-          </div>
-          </div>
-          {% endblock %}
-
-     </div> <!-- end content -->
-
 
   {% endblock %}
   {% block footer %}{% endblock %}
+
+ <footer>
+  <p>Created at 2017</p>
+  <p>Contact information: <a href="mailto:someone@example.com"> someone@example.com</a>.</p>
+</footer>
+
+
  </body>
  </html>
