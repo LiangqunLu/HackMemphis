@@ -17,7 +17,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib.auth import views as auth_views
 from django.contrib import admin
-from . import view, search
+from . import view
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -41,8 +41,6 @@ urlpatterns = [
 
     url(r'^$', view.hello),
 
-    url(r'^search-form$', search.search_form),
-    url(r'^search$', search.search),
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
 

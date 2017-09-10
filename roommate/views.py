@@ -6,4 +6,6 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello, this is a housing information page")
+    context = {}
+    context['hello'] = 'Hello World!'
+    return render(request, 'roommate.html', context)
